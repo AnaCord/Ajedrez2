@@ -1,0 +1,869 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFondo"
+    android:id="@+id/main"
+    tools:context=".controller.Main1Activity">
+
+    <LinearLayout
+
+        android:id="@+id/tablero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true">
+            <TextView
+                android:id="@+id/Premiun"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amaranthbold"
+                android:text="@string/premium"
+                android:background="@color/colorContrasteTexto"
+                android:textColor="@color/white"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:textAlignment="center"/>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/juego"
+        android:layout_below="@id/tablero"
+        android:paddingBottom="70dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/TituloNivel"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="6dp"
+
+                android:fontFamily="@font/amaranthbold"
+                android:text="@string/nivel"
+                android:background="@drawable/fondotitulo"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:paddingTop="10dp"
+                android:textSize="18sp">
+
+            </TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/NumeroNivel"
+                    android:fontFamily="@font/amaranthbold"
+                    android:text="1"
+                    android:layout_marginStart="6dp"
+                    android:background="@drawable/fondotitulo2"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:paddingTop="10dp"
+                    android:textSize="18sp">
+
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="83dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/MovimientosTitulo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/caja1"
+                        android:fontFamily="@font/amaranthbold"
+                        android:paddingTop="10dp"
+                        android:text="@string/mov"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/MovimientosNumero"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                       android:layout_marginEnd="2dp"
+                        android:background="@drawable/cajaabajo"
+                        android:fontFamily="@font/amaranthbold"
+                        android:paddingTop="10dp"
+                        android:text="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/TiempoTitulo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/caja1"
+                        android:fontFamily="@font/amaranthbold"
+                        android:paddingTop="10dp"
+                        android:text="@string/tiempo"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/TiempoNumero"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/cajaabajo"
+                        android:fontFamily="@font/amaranthbold"
+                        android:paddingTop="10dp"
+                        android:text="1:00"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/IntentosTitulo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/caja1"
+                        android:fontFamily="@font/amaranthbold"
+                        android:paddingTop="10dp"
+                        android:text="@string/intentos"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/IntentosNumero"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/cajaabajo"
+                        android:fontFamily="@font/amaranthbold"
+                        android:paddingTop="10dp"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/ExtrasTitulo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/caja1"
+                        android:fontFamily="@font/amaranthbold"
+                        android:paddingTop="10dp"
+                        android:text="@string/extras"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/MovimientosNumero"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/cajaabajo"
+                        android:fontFamily="@font/amaranthbold"
+                        android:paddingTop="10dp"
+                        android:text="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+            <!--Nuevos text view-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableLayout
+                    android:id="@+id/tablero2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp">
+
+
+                    <!--Primera fila del tablero 2-->
+                    <TableRow
+                        android:weightSum="8">
+                        <ImageView
+                            android:tag="A1"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/white"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="B1"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/black"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="C1"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/white"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="D1"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/black"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="E1"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/white"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="F1"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/black"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="G1"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/white"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="H1"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/black"
+                            android:src=""/>
+
+
+                    </TableRow> <!--Fin de la primera fila del tablero 2-->
+
+                    <!--Segunda fila del tablero 2-->
+                    <TableRow
+                        android:weightSum="8">
+                        <ImageView
+                            android:tag="A2"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/black"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="B2"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/white"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="C2"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/black"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="D2"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/white"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="E2"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/black"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="F2"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/white"
+                            android:src=""/>
+                        <ImageView
+                            android:tag="G2"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/black"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="H2"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/white"
+                            android:src=""/>
+
+
+                    </TableRow> <!-- Fin de la Segunda fila del tablero 2-->
+
+                    <!--Tercera fila del tablero 2-->
+                    <TableRow
+                        android:weightSum="8">
+                        <ImageView
+                            android:tag="A3"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/white"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="B3"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/black"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="C3"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/white"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="D3"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/black"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="E3"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/white"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="F3"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/black"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="G3"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/white"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="H3"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/black"
+                            android:src=""/>
+
+
+                    </TableRow> <!--Fin de la tercera fila del tablero 2-->
+
+                    <!--Cuarta fila del tablero 2-->
+                    <TableRow
+                        android:weightSum="8">
+                        <ImageView
+                            android:tag="A4"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/black"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="B4"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/white"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="C4"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/black"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="D4"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/white"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="E4"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/black"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="F4"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/white"
+                            android:src=""/>
+                        <ImageView
+                            android:tag="G4"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/black"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="H4"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/white"
+                            android:src=""/>
+
+
+                    </TableRow> <!-- Fin de la cuarto fila del tablero 2-->
+
+
+                    <!--Quinta fila del tablero 2-->
+                    <TableRow
+                        android:weightSum="8">
+                        <ImageView
+                            android:tag="A5"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/white"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="B5"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/black"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="C5"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/white"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="D5"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/black"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="E5"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/white"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="F5"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/black"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="G5"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/white"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="H5"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/black"
+                            android:src=""/>
+
+
+                    </TableRow> <!--Fin de la quinta fila del tablero 2-->
+
+                    <!--Sexta fila del tablero 2-->
+                    <TableRow
+                        android:weightSum="8">
+                        <ImageView
+                            android:tag="A6"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/black"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="B6"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/white"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="C6"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/black"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="D6"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/white"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="E6"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/black"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="F6"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/white"
+                            android:src=""/>
+                        <ImageView
+                            android:tag="G6"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/black"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="H6"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/white"
+                            android:src=""/>
+
+
+                    </TableRow> <!-- Fin de la sexta fila del tablero 2-->
+
+                    <!--septima fila del tablero 2-->
+                    <TableRow
+                        android:weightSum="8">
+                        <ImageView
+                            android:tag="A7"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/white"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="B7"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/black"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="C7"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/white"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="D7"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/black"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="E7"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/white"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="F7"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/black"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="G7"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/white"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="H7"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/black"
+                            android:src=""/>
+
+
+                    </TableRow> <!--Fin de la septima fila del tablero 2-->
+
+                    <!--Octava fila del tablero 2-->
+                    <TableRow
+                        android:weightSum="8">
+                        <ImageView
+                            android:tag="A8"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/black"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="B8"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/white"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="C8"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/black"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="D8"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/white"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="E8"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/black"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="F8"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/white"
+                            android:src=""/>
+                        <ImageView
+                            android:tag="G8"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/black"
+                            android:src=""/>
+
+                        <ImageView
+                            android:tag="H8"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="43dp"
+                            android:background="@color/white"
+                            android:src=""/>
+
+
+                    </TableRow> <!-- Fin de la octava fila del tablero 2-->
+
+
+
+                </TableLayout>
+
+            </RelativeLayout>
+
+            <!--Nuevos text view-->
+
+            <TextView
+                android:id="@+id/tvInstrucciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/amaranth_regular"
+                android:text="@string/instrucciones"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/tvAutor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amaranth_regular"
+                android:text="@string/instrucciones"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/anuncios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    </LinearLayout>
+
+
+
+</RelativeLayout>
+
